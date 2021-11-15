@@ -37,19 +37,19 @@ I would like to be able to search by artist
 ```
 
 ```
-[ ] As a researchers of all bangers
-So that I can refine my search
+[ ] As a purveyor of big beats
+So that I can fine-tune my radio dial
 I would like to be able to search by year
 ```
 
 ```
-[ ] As a researchers of all bangers
-So that I can refine my search
+[ ] As a groovy cat
+So that I can surf the hippest frequencies
 I would like to be able to search by album
 ```
 
 ```
-[ ] As a researchers of all bangers
-So that I can refine my search
+[ ] As a sonic explorer
+So that I can discover new musical worlds
 I would like to be able to search for associated artists
 ```
