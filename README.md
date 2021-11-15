@@ -31,8 +31,8 @@ I would like to share a YouTube/Bandcamp link to each song
 ```
 
 ```
-[ ] As a researchers of all bangers
-So that I can refine my search
+[ ] As a musicologist
+So that I can get my PhD in bangers
 I would like to be able to search by artist
 ```
 
