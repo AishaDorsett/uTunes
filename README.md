@@ -27,7 +27,7 @@ I would like to be able to add tracks
 ```
 [ ] As a fanatic enjoyer of music
 So that I can share the love with my fellow human people
-I would like to share a YouTube link to each song
+I would like to share a YouTube/Bandcamp link to each song
 ```
 
 ```
