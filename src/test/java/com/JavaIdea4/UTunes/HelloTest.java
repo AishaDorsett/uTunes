@@ -2,10 +2,13 @@ package com.JavaIdea4.UTunes;
 import com.JavaIdea4.UTunes.controller.HelloController;
 import org.junit.jupiter.api.Test;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.runner.RunWith;
+// import org.junit.After;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Assertions;
+// import org.junit.Assert;
+// import org.junit.Before;
+// import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,29 +21,36 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.openqa.selenium.support.pagefactory.ByAll;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest (classes = UTunesApplication.class)
+// @RunWith(SpringRunner.class)
+@SpringBootTest(classes = UTunesApplication.class)
 
 public class HelloTest {
-    public WebDriver driver = new ChromeDriver();;
+    static WebDriver driver;
 
-    @Before 
-    public void setup() {
-    System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+    @BeforeAll
+    public static void setup() {
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        driver = new ChromeDriver();
+        driver.get("http://localhost:8080/");
     }
 
-    @After
-    public void tearDown() {
+    @AfterAll
+    public static void tearDown() {
         driver.close();
-        driver.quit();
     }
 
     @Test
-    public void userCanSearchByGenre() {
-        driver.get("http://localhost:8080/");
-        Assert.assertEquals("Hello",driver.findElement(By.tagName("h1")).getText());
-        driver.close();
-        driver.quit();
+    public void checksHeaderSaysHello(){ 
+
+        Assertions.assertEquals("Hello",driver.findElement(By.tagName("h1")).getText());
     }
+
+    // @Test
+    // public void userCanSearchByGenre() {
+    //     driver.findElement(By.id("content")).sendKeys("Hip Hop");
+    //     driver.findElement(By.id("submit")).click();
+
+    //     Assertions.assertEquals("King Kunta",driver.findElement(By.tagName("body")).getText());
+    // }
 
 }
