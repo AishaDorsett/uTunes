@@ -8,7 +8,9 @@ public class TuneController {
 
 	@GetMapping("/search")
 	public String index() {
-		return "/search.html";
+		// String search = "Search";
+		return "homepage/search.html";
+		// return search;
 	}
 
 }
