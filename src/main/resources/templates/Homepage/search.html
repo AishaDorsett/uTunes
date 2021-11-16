@@ -4,14 +4,22 @@
   <title>uTunes</title>
   <link th:href="@{/styles/main.css}" rel="stylesheet" />
 </head>
-
-<h1 id="title">Select a genre:</h1>
-<select name="genres" id="genres">
-  <option value="doowop">Doo Wop</option>
-  <option value="r&b">R&B</option>
-  <option value="contemporaryjazz">Contemporary Jazz</option>
-  <option value="rock">Rock</option>
-  <option value="hiphop">Hip Hop</option>
-</select>
-
+<form>
+  <fieldset>
+     <legend>Select a genre:</legend>
+     <select
+        name=genre
+        id=select
+        autocomplete=off
+        required
+        >
+        <option value="contemporaryjazz">Contemporary Jazz</option>
+        <option value="doowop">Doo Wop</option>
+        <option value="hiphop">Hip Hop</option>
+        <option value="rnb">R&B</option>
+        <option value="rock">Rock</option>
+     </select>
+     <input type="submit" value="Submit" />
+  </fieldset>
+ </form>
 </html>
