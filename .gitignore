@@ -9,3 +9,7 @@ dependency-reduced-pom.xml
 .factorypath
 .project
 .settings/
+
+
+target/classes/com/JavaIdea4/UTunes/UTunesApplication.class 
+target/classes/com/JavaIdea4/UTunes/SecurityConfiguration.class
