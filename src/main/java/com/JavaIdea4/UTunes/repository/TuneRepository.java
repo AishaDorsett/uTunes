@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface TuneRepository extends CrudRepository<Tune, Long> {
-    List<Tune> findByGenre();
+public interface TuneRepository extends CrudRepository< Tune , Long> {
+    List<Tune> findByGenre(String genre);
 }
 
