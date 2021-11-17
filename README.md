@@ -66,17 +66,17 @@ I would like to be able to search for associated artists
 7. go to src/main/resources/application.properties and add the following line: `spring.datasource.chromedriver=${CHROMEDRIVER}`
 8. go to src/test/java/com/JavaIdea4/UTunes/HelloTest.java
   1. paste this line: `import org.springframework.beans.factory.annotation.Value;`
-  2. under `static WebDriver driver;` add the following lines;
-    - `@Value("${spring.datasource.chromedriver}")`
-    - `private static String chromedriver;`
+  2. under `WebDriver driver;` add the following lines;
+```
+@Value("${spring.datasource.chromedriver}")
+private String chromedriver;
+```
   3. edit `@BeforeAll` to say:
-     ```
-     @BeforeAll
-     public void setup() {
-        System.setProperty("webdriver.chrome.driver", chromedriver);
-        driver = new ChromeDriver();
-        driver.get("http://localhost:8080/");
-     }
-     ```
-9. run `mvn test`from your terminal
-  - make sure that spring-boot is currently running with `mvn spring-boot:run`
+```
+@BeforeAll
+public void setup() {
+    System.setProperty("webdriver.chrome.driver", chromedriver);
+    driver = new ChromeDriver();
+}
+```
+9. run `mvn test`from your terminal (make sure that spring-boot is currently running with `mvn spring-boot:run`)
