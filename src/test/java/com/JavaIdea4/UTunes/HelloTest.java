@@ -32,7 +32,7 @@ public class HelloTest {
     public static void setup() {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         driver = new ChromeDriver();
-        driver.get("http://localhost:8080/");
+        
     }
 
     @AfterAll
@@ -42,7 +42,7 @@ public class HelloTest {
 
     @Test
     public void checksHeaderSaysHello(){ 
-
+        driver.get("http://localhost:8080/");
         Assertions.assertEquals("Hello",driver.findElement(By.tagName("h1")).getText());
     }
 
