@@ -21,7 +21,7 @@ I would like to save a list of favourite jamz
 ```
 [ ] As a well-listened fan
 So that I can keep on top of all of my favourite music
-I would like to be able to add tracks
+I would like to be able to add trax
 ```
 
 ```
