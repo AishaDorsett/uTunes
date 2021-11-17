@@ -63,7 +63,7 @@ I would like to be able to search for associated artists
 4. save your .zshrc file
 5. run `source ~/.zshrc`
 6. run `echo $CHROMEDRIVER`
-7. go to src/main/resources/application.properties and add this line: spring.datasource.chromedriver=${CHROMEDRIVER}
+7. go to src/main/resources/application.properties and add the following line: `spring.datasource.chromedriver=${CHROMEDRIVER}`
 8. go to src/test/java/com/JavaIdea4/UTunes/HelloTest.java
   1. paste this line: `import org.springframework.beans.factory.annotation.Value;`
   2. under `static WebDriver driver;` add the following lines;
