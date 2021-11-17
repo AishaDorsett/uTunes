@@ -50,7 +50,8 @@ public class HelloTest {
     //     driver.findElement(By.id("content")).sendKeys("Hip Hop");
     //     driver.findElement(By.id("submit")).click();
 
-    //     Assertions.assertEquals("King Kunta",driver.findElement(By.tagName("body")).getText());
+    //     Assertions.assertEquals("King Kunta",driver.findElement(By.tagName("body")).getText()); - this might not work as I think
+    // it has to be the exact same result, will look into that
     // }
 
 }
