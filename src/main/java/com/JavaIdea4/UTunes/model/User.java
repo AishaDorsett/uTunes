@@ -2,6 +2,8 @@ package com.JavaIdea4.UTunes.model;
 
 import javax.persistence.*;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 // import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
@@ -38,9 +40,9 @@ public class User {
     this.username = username;
   }
 
-  // public void setPassword(String password) {
-  //   BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
-  //   String encodedPassword = encoder.encode(password);
-  //   this.password = encodedPassword;
-  // }
+  public void setPassword(String password) {
+    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
+    String encodedPassword = encoder.encode(password);
+    this.password = encodedPassword;
+  }
 }
