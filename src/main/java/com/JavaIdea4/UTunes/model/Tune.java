@@ -25,7 +25,7 @@ public class Tune {
 
 	}
 
-	public Tune(String title, String artistname, String genre) {
+	public Tune(String trackname, String artistname, String genre) {
 		this.trackname = trackname;
 		this.artistname = artistname;
 		this.genre = genre;
