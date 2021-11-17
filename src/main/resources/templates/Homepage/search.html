@@ -4,7 +4,8 @@
   <title>uTunes</title>
   <link th:href="@{/styles/main.css}" rel="stylesheet" />
 </head>
-<form>
+
+<form class="selectgenre" action ="#" th:action="@{/search}" th:object="${tune}" method="post" enctype="multipart/form-data">
   <fieldset>
      <legend>Select a genre:</legend>
      <select
@@ -34,7 +35,7 @@
                 <div class="card-body">
                   <!-- Content -->
                   <div class="tune-body">
-                    <p class="tune-text" th:text="${tune}" >
+                    <p class="tune-text" th:text="${tunes}" >
                   </div>
                 </div>
               </div>
