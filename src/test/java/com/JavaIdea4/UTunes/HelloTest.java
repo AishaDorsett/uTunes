@@ -19,6 +19,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.openqa.selenium.support.pagefactory.ByAll;
+import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 
 // @RunWith(SpringRunner.class)
@@ -47,11 +48,12 @@ public class HelloTest {
 
     // @Test
     // public void userCanSearchByGenre() {
-    //     driver.findElement(By.id("content")).sendKeys("Hip Hop");
+    //     driver.get("http://localhost:8080/search");
+    //     Select dropdown = new Select(driver.findElement(By.id("select")));
+    //     dropdown.selectByValue("hiphop");
     //     driver.findElement(By.id("submit")).click();
 
-    //     Assertions.assertEquals("King Kunta",driver.findElement(By.tagName("body")).getText()); - this might not work as I think
-    // it has to be the exact same result, will look into that
+    //     Assertions.assertEquals("King Kunta",driver.findElement(By.tagName("body")).getText());
     // }
 
 }
