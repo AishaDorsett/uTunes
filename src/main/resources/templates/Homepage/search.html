@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head lang="en">
+  <meta charset="UTF-8" />
+  <title>uTunes</title>
+  <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+
+<form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
+  <fieldset>
+     <legend>Select a genre:</legend>
+     <select
+        name=genre
+        id=select
+        autocomplete=off
+        required
+        >
+        <option value="Contemporary Jazz">Contemporary Jazz</option>
+        <option value="Doo Wop">Doo Wop</option>
+        <option value="Hip Hop">Hip Hop</option>
+        <option value="R&B">R&B</option>
+        <option value="Rock">Rock</option>
+     </select>
+     <input id= "submit" type="submit" value="Submit" />
+  </fieldset>
+ </form>
+</html>
+
+  <!-- Posts feed -->
+  <th:block th:each="tune: ${tunes}">
+    <div class="container tunes-trackname">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+              <div class="card mx-auto d-flex justify-content-center">
+                <div class="card-body">
+                  <!-- Content -->
+                  <div class="tune-body">
+                    <p class="tune-text" th:text="${tune.getTrackname()}" >
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </th:block>
