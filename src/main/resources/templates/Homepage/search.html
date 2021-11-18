@@ -8,18 +8,16 @@
 <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
   <fieldset>
      <legend>Select a genre:</legend>
-     <select
-        name=genre
-        id=select
-        autocomplete=off
-        required
-        >
-        <option value="Contemporary Jazz">Contemporary Jazz</option>
-        <option value="Doo Wop">Doo Wop</option>
-        <option value="Hip Hop">Hip Hop</option>
-        <option value="R&B">R&B</option>
-        <option value="Rock">Rock</option>
-     </select>
+     <!-- <select> -->
+        <input type="text" list="genre" name="genre"> 
+        <datalist id="genre">
+          <option value="Contemporary Jazz">Contemporary Jazz</option>
+          <option value="Doo Wop">Doo Wop</option>
+          <option value="Hip Hop">Hip Hop</option>
+          <option value="R&B">R&B</option>
+          <option value="Rock">Rock</option>
+        </datalist>
+     <!-- </select> -->
      <input id= "submit" type="submit" value="Submit" />
   </fieldset>
  </form>
