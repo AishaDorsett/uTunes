@@ -1,7 +1,7 @@
 h1 {color:pink;}
 
 body {
-  background-image: url("../images/utunes-backgound.jpg");
+  background-image: url("../images/utunes-background.jpg") !important; 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
