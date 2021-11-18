@@ -1,8 +1,21 @@
 h1 {color:pink;}
 
+body {
+  background-image: url("../images/utunes-backgound.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
 .selectgenre {
-  border: 1px solid rgb(0, 0, 0);
   padding: 0.5rem;
   text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.tune-body {
+  border: 5px solid rgba(0, 0, 0, 0.373);
+  padding: 0.5rem;
+  text-align: center;
   margin-bottom: 0.5rem;
 }
