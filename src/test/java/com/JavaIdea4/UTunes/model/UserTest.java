@@ -1,11 +1,15 @@
 package com.JavaIdea4.UTunes.model;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import org.junit.jupiter.api.Assertions;
 
 import com.github.javafaker.Faker;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 public class UserTest {
@@ -31,5 +35,40 @@ public class UserTest {
     user.setUsername(name);
     assertThat("test name is set", user.getUsername(), containsString(name));
 
+  }
+
+  @Test
+  public void testEncodingPassword() {
+    String rawPassword = "potato";
+    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    String encodedPassword = passwordEncoder.encode(rawPassword);
+
+    boolean matched = passwordEncoder.matches("potato", encodedPassword);
+
+    Assertions.assertTrue(matched);
+  }
+
+  @Test
+  public void doesntMatchSameValue() {
+    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    assertFalse(passwordEncoder.matches("password", "password"));
+  }
+
+  @Test
+  public void doesntMatchNullEncodedValue() {
+    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    assertFalse(passwordEncoder.matches("password", null));
+  }
+
+  @Test
+  public void doesntMatchEmptyEncodedValue() {
+    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    assertFalse(passwordEncoder.matches("password", ""));
+  }
+
+  @Test
+  public void doesntMatchBogusEncodedValue() {
+    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    assertFalse(passwordEncoder.matches("password", "012345678901234567890123456789"));
   }
 }

@@ -32,6 +32,6 @@ public class UserController {
 
         // Authority authority = new Authority(user.getUsername(), "ROLE_USER");
         // authoritiesRepository.save(authority);
-        return new RedirectView("/");
+        return new RedirectView("/tunes");
     }
 }

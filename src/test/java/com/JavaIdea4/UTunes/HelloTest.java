@@ -34,7 +34,7 @@ public class HelloTest {
 
     @BeforeAll
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", chromedriver);
+        System.setProperty("webdriver.chrome.driver",chromedriver );
         driver = new ChromeDriver();
     }
 
@@ -49,14 +49,14 @@ public class HelloTest {
         Assertions.assertEquals("Hello",driver.findElement(By.tagName("h1")).getText());
     }
 
-    // @Test
-    // public void userCanSearchByGenre() {
-    //     driver.get("http://localhost:8080/search");
-    //     Select dropdown = new Select(driver.findElement(By.id("select")));
-    //     dropdown.selectByValue("hiphop");
-    //     driver.findElement(By.id("submit")).click();
+    @Test
+    public void userCanSearchByGenre() {
+        driver.get("http://localhost:8080/tunes");
+        Select dropdown = new Select(driver.findElement(By.id("select")));
+        dropdown.selectByValue("Hip Hop");
+        driver.findElement(By.id("submit")).click();
+        String result = driver.findElement(By.tagName("div")).getText(); // needed for the asserTrue format(it did not want to accept this code inside)
 
-    //     Assertions.assertEquals("King Kunta",driver.findElement(By.tagName("body")).getText());
-    // }
-
+        Assertions.assertTrue(result.contains("King Kunta"));
+    }
 }
