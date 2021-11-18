@@ -24,6 +24,7 @@ public class TuneController {
 	public String listtunes(Model model) { // why do we need Model? It works without...
 		return "homepage/search.html";
 	}
+	
 	@GetMapping("/tunes/search")
 	public String search(@RequestParam String genre, Model model) {
 		Iterable<Tune> tunes = repository.findByGenre(genre);
