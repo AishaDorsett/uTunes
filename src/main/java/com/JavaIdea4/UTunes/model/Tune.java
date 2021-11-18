@@ -61,6 +61,6 @@ public class Tune {
 
 	@Override
 	public String toString() {
-		return "Tutorial [id=" + id + ", Trackname=" + trackname + ", Artist=" + artistname + ", Genre=" + genre + "]";
+		return "[id=" + id + ", Trackname=" + trackname + ", Artist=" + artistname + ", Genre=" + genre + "]";
 	}
 }

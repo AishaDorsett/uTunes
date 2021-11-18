@@ -21,18 +21,13 @@ public class TuneController {
 	TuneRepository repository;
 
 	@GetMapping("/tunes")
-	public String listtunes(Model model) {
-		// String search = "Search";
-		Iterable<Tune> tunes = repository.findAll();
-		model.addAttribute("tunes",tunes);
+	public String listtunes(Model model) { // why do we need Model? It works without...
 		return "homepage/search.html";
-		// return search;
 	}
 	@GetMapping("/tunes/search")
-	public String search(@RequestParam String genre ,Model model) {
+	public String search(@RequestParam String genre, Model model) {
 		Iterable<Tune> tunes = repository.findByGenre(genre);
 		model.addAttribute("tunes",tunes);
-		System.out.println("*******");
 		return "homepage/search.html";
 		// return search;
 	}
