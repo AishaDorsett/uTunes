@@ -3,42 +3,47 @@
   <meta charset="UTF-8" />
   <title>uTunes</title>
   <link th:href="@{/styles/main.css}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
-  <fieldset>
-     <legend>Select a genre:</legend>
-     <select
-        name=genre
-        id=select
-        autocomplete=off
-        required
-        >
-        <option value="Contemporary Jazz">Contemporary Jazz</option>
-        <option value="Doo Wop">Doo Wop</option>
-        <option value="Hip Hop">Hip Hop</option>
-        <option value="R&B">R&B</option>
-        <option value="Rock">Rock</option>
-     </select>
-     <input id= "submit" type="submit" value="Submit" />
-  </fieldset>
- </form>
-</html>
+<body>
+  <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Select a genre:</legend>
+          <input type="text" list="genre" name="genre"> 
+          <datalist id="genre">
+            <option value="Contemporary Jazz">Contemporary Jazz</option>
+            <option value="Doo Wop">Doo Wop</option>
+            <option value="Hip Hop">Hip Hop</option>
+            <option value="R&B">R&B</option>
+            <option value="Rock">Rock</option>
+          </datalist>
+      <input id= "submit" type="submit" value="Submit" />
+    </fieldset>
+  </form>
 
   <!-- Posts feed -->
   <th:block th:each="tune: ${tunes}">
-    <div class="container tunes-trackname">
+      <div class="container tunes-trackname">
         <div class="row justify-content-center">
           <div class="col-lg-6">
               <div class="card mx-auto d-flex justify-content-center">
                 <div class="card-body">
                   <!-- Content -->
                   <div class="tune-body">
-                    <p class="tune-text" th:text="${tune.getTrackname()}" >
+                    <h3><p class="tune-text" th:text="${tune.getArtistname()}"></h3>
+                    <h4><p class="tune-text" th:text="${tune.getTrackname()}" ></h4>
                   </div>
                 </div>
               </div>
           </div>
         </div>
       </div>
-    </th:block>
+  </th:block>
+</body>
+</html>

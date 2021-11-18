@@ -1,1 +1,24 @@
 h1 {color:pink;}
+
+body {
+  background-image: url("../images/utunes-background.jpg") !important; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+/* image download url: https://unsplash.com/photos/KA1WM_yQGF8 */
+
+.selectgenre {
+  padding: 0.5rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.tune-body {
+  border: 5px solid rgba(0, 0, 0, 0.373);
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.705);
+}
+
