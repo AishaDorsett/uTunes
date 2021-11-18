@@ -27,9 +27,9 @@ VALUES
   ('Humble', 'Kendrick Lamar', 'Hip Hop'),
   ('Poetic Justice', 'Kendrick Lamar', 'Hip Hop'),
   ('3005', 'Childish Gambino', 'Hip Hop'),
-  ('Gangstas Paradise', 'Coolio, Kylian Mash & Rico Bernasconi', 'Hip Hop'),
+  ('Gangsta''s Paradise', 'Coolio, Kylian Mash & Rico Bernasconi', 'Hip Hop'),
   ('Down For The Count', 'Reflection Eternal', 'Hip Hop'),
   ('Power', 'Rapsody', 'Hip Hop'),
   ('Penitentiary Philosophy', 'Erykah Badu', 'Hip Hop'),
-  ('Devils Pie', 'D Angelo', 'Hip Hop'),
+  ('Devil''s Pie', 'D''Angelo', 'Hip Hop'),
   ('The Light', 'Common', 'Hip Hop');
