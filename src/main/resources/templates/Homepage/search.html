@@ -12,6 +12,16 @@
 </head>
 
 <body>
+
+  <a style="color: white" href="#popup1"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <h2>Are you sure you want to log out?</h2>
+      <a class="close" href="/logout">Yes</a><br /><br />
+      <a class="close" href="#">No</a>
+    </div>
+  </div>
+
   <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
     <fieldset>
       <legend>Select a genre:</legend>

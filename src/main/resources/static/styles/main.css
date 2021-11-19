@@ -38,3 +38,79 @@ body {
   margin-bottom: 0.5rem;
   color: rgba(0, 0, 0, 0.705);
 }
+
+/* Logout PopUp */
+
+/* .logoutbtn {
+  font-size: 12px;
+  padding: 7px;
+  color: #fff;
+  background: #068bd8;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.logoutbtn:hover {
+  background: #0470af;
+} */
+
+/* This makes the content of the popup hidden*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* This makes the content of the popup present, outside of a box, and changes the opacity of the page, makes it darker */
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* This is the actual box that contains our logout content */
+.popup {
+  margin: 70px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 5px;
+  width: 35%;
+  position: absolute;
+  transition: all 5s ease-in-out;
+}
+
+/* This changes the Font of the title */
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* This gets rid of the link aspect of the yes and no buttons, they now look just like words */
+.popup .close {
+  transition: all 200ms;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* This changes the colour of the yes and no when hovering over them */
+.popup .close:hover {
+  color: #06aed8;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+      width: 70%;
+  }
+
+  .popup {
+      width: 70%;
+  }
+}
