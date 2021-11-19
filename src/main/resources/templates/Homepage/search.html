@@ -13,30 +13,27 @@
             <li>
               <a class="navbar-brand">uTunes</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">Search</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="#">Favourites</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign Out</a>
+              <a id="nav-link" href="#popup1"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                <div id="popup1" class="overlay">
+                <div class="popup">
+                  <h2>Are you sure you want to log out?</h2>
+                  <a class="close" href="/logout">Yes</a><br /><br />
+                  <a class="close" href="#">No</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </nav>
 
 <body>
-
-  <!-- logout -->
-  <a id="logoutlink" style="color: white" href="#popup1"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
-  <div id="popup1" class="overlay">
-    <div class="popup">
-      <h2>Are you sure you want to log out?</h2>
-      <a class="close" href="/logout">Yes</a><br /><br />
-      <a class="close" href="#">No</a>
-    </div>
-  </div>
 
   <!-- genre selector -->
   <div>
