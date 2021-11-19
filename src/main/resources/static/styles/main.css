@@ -1,43 +1,125 @@
-h1 {color:pink;}
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 
-body {
+/* everything */
+* {
+  font-family: Audiowide;
+}
+
+/* body */
+html, body {
   background-image: url("../images/utunes-background.jpg") !important; 
+  background-color: rgba(0, 0, 0, 0.45);
+  background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
+  color: rgba(209, 131, 21, 0.7);
 }
 /* image download url: https://unsplash.com/photos/KA1WM_yQGF8 */
 
-.selectgenre {
-  padding: 0.5rem;
+/* navbar */
+.navbar {
+  padding: 0.15rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* all navbar text */
+.navbar li {
+  display: inline;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+/* all navbar text continued... */
+.navbar a {
+  text-decoration: none;
+  text-align: center;
   color: rgb(0, 0, 0);
-  text-align: left;
+  padding: 0.5rem;
+  display: inline-block;
+  color: rgba(209, 131, 21, 0.7);
+}
+
+/* uTunes text size */
+.navbar-brand, .title {
+  font-size: 30px;
+}
+
+/* non-uTunes navbar text */
+.nav-item {
+  font-size: 15px;
+}
+
+/* genre picker - entire form */
+.selectgenre, .signup-form, .title {
+  padding: 0.5rem;
+  padding-right: 7rem;
+  color: rgba(209, 131, 21, 0.7);
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
-.dropdown {
+
+
+/* dropdown menu / signup inputs */
+.dropdown, .signup-fields {
   padding: 0.5rem;
+  color: rgba(209, 131, 21, 0.8);
   text-align: left;
   margin-bottom: 0.5rem;
+  background-color: rgba(174, 109, 18, 0.3);
+  border-color: rgba(55, 55, 55, 0.5);
+  border-width: 2px;
   opacity: 0.5;
 }
 
-.submit {
-  padding: 0.5rem;
-  color:rgb(0, 0, 0);
-  text-align: left;
-  margin-bottom: 0.5rem;
-  border-color: rgba(33, 33, 33, 0.407);
-  background-color: rgba(255, 255, 255, 0.496);
+/* Placeholder colour - Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  color: rgba(209, 131, 21, 0.8);
+}
+/* Placeholder colour - Internet Explorer 10-11, Microsoft Edge */
+::-ms-input-placeholder {
+  color: rgba(209, 131, 21, 0.8);
+}
+/* 
+input, select, textarea{
+  color: #ff0000;
 }
 
+textarea:focus, input:focus {
+  color: #ff0000;
+} */
+
+/* submit button */
+.submit, .reset {
+  padding: 0.5rem;
+  color: rgba(209, 131, 21, 0.8);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background-color: rgba(174, 109, 18, 0.3);
+  border-color: rgba(55, 55, 55, 0.5);
+  border-width: 2px;
+  opacity: 0.7;
+}
+
+/* suggestions text */
 .tune-body {
-  border: 5px solid rgba(0, 0, 0, 0.373);
+  border: 5px solid rgba(174, 109, 18, 0.3);
   padding: 0.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
-  color: rgba(0, 0, 0, 0.705);
+  color: rgba(209, 131, 21, 0.7);
 }
+
+/* individual suggestion boxes */
+.container {
+  margin: auto;
+  width: 50%;
+  color: rgba(174, 109, 18, 0.3);
+}
+
+/* ******************** Ana ******************** */
 
 /* Logout PopUp */
 
@@ -112,6 +194,7 @@ body {
   color: #06aed8;
 }
 
+/* No idea */
 @media screen and (max-width: 700px) {
   .box {
       width: 70%;
