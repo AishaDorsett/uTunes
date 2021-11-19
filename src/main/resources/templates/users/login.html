@@ -1,0 +1,28 @@
+<form name="f" th:action="@{/login}" method="post">
+  <fieldset>
+    <legend>
+      <div class="white-font">
+        <h1>Please sign in</h1>
+      </div>
+    </legend>
+    <div th:if="${param.error}" class="alert alert-error" style="color:red">
+      Bad credentials
+    </div><br>
+    <div th:if="${param.logout}" class="alert alert-success" style="color:green">
+      You have been logged out.
+    </div><br>
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+        <input class="text" type="text" id="username" name="username" placeholder="Username" required /><br>
+        <input class="text" type="password" id="password" name="password" placeholder="Password"
+          required /><br><br>
+        <div class="form-actions">
+          <button type="submit" class="btn"
+            style="background:#337ab7;color:white; border-radius: 14px; padding:10px; width: 100%">Sign
+            in</button>
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
