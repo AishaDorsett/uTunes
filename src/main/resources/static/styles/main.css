@@ -55,9 +55,16 @@ body {
   background: #0470af;
 } */
 
+#logoutlink {
+  color: white;
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+
 /* This makes the content of the popup hidden*/
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
