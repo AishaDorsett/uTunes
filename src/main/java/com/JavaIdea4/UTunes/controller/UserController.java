@@ -34,4 +34,9 @@ public class UserController {
         // authoritiesRepository.save(authority);
         return new RedirectView("/tunes");
     }
+
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "users/login";
+    }
 }
