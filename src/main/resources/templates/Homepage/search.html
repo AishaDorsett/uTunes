@@ -27,6 +27,7 @@
       </nav>
 
 <body>
+  <!-- genre selector -->
 <div>
   <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
       <a class="select-a-genre">Select a genre:</a>
@@ -42,7 +43,7 @@
   </form>
 </div>
 
-  <!-- Posts feed -->
+  <!-- suggested tracks -->
   <th:block th:each="tune: ${tunes}">
       <div class="container tunes-trackname">
         <div class="row justify-content-center">
