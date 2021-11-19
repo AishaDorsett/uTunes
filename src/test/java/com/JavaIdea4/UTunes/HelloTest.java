@@ -46,7 +46,7 @@ public class HelloTest {
     @Test
     public void checksHeaderSaysHello(){ 
         driver.get("http://localhost:8080/");
-        Assertions.assertEquals("Hello",driver.findElement(By.tagName("h1")).getText());
+        Assertions.assertEquals("Sign Up",driver.findElement(By.tagName("p")).getText());
     }
 
     @Test
