@@ -27,8 +27,19 @@
       </nav>
 
 <body>
+
+  <!-- logout -->
+  <a id="logoutlink" style="color: white" href="#popup1"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <h2>Are you sure you want to log out?</h2>
+      <a class="close" href="/logout">Yes</a><br /><br />
+      <a class="close" href="#">No</a>
+    </div>
+  </div>
+
   <!-- genre selector -->
-<div>
+  <div>
   <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
       <a class="select-a-genre">Select a genre:</a>
           <input class= "dropdown" type="text" list="genre" name="genre"> 
