@@ -15,7 +15,7 @@
   <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
     <fieldset>
       <legend>Select a genre:</legend>
-          <input class= "dropdown" type="text" list="genre" name="genre"> 
+          <input class= "dropdown" list="genre" name="genre" readonly="readonly"> 
           <datalist id="genre">
             <option value="Contemporary Jazz">Contemporary Jazz</option>
             <option value="Doo Wop">Doo Wop</option>
