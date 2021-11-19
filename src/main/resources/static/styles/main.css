@@ -1,6 +1,4 @@
-h1 {color:pink;}
-
-body {
+html, body {
   background-image: url("../images/utunes-background.jpg") !important; 
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,6 +11,33 @@ body {
   color: rgb(0, 0, 0);
   text-align: left;
   margin-bottom: 0.5rem;
+}
+
+.navbar {
+  padding: 0.2rem;
+  margin: 0.5rem;
+  color:rgb(0, 0, 0);
+  text-align: center;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  text-decoration: none;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.nav-item {
+  font-size: 15px;
 }
 
 .dropdown {
