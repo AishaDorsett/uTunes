@@ -4,8 +4,8 @@
   <title>uTunes</title>
   <link rel="icon" href="https://icons.iconarchive.com/icons/webalys/kameleon.pics/512/Record-Player-icon.png" sizes="any">
   <link th:href="@{/styles/main.css}" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  <style>body { font-family: "Audiowide", sans-serif; } </style>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <style>body { font-family: "Audiowide", sans-serif; } </style> -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">  -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
@@ -19,13 +19,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
             <li>
-              <a class="navbar-brand">
-                <!-- <img src="https://icons.iconarchive.com/icons/webalys/kameleon.pics/512/Record-Player-icon.png" width="40" height="40" class="d-inline-block align-center" alt=""> -->
-                uTunes
-              </a>
+              <a class="navbar-brand">uTunes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Favourites</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sign Out</a>
@@ -35,9 +35,9 @@
       </nav>
 
 <body>
+<div>
   <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
-    <fieldset>
-      <legend>Select a genre:</legend>
+      <a class="select-a-genre">Select a genre:</a>
           <input class= "dropdown" type="text" list="genre" name="genre"> 
           <datalist id="genre">
             <option value="Contemporary Jazz">Contemporary Jazz</option>
@@ -47,8 +47,8 @@
             <option value="Rock">Rock</option>
           </datalist>
       <input class="submit" id= "submit" type="submit" value="Submit" />
-    </fieldset>
   </form>
+</div>
 
   <!-- Posts feed -->
   <th:block th:each="tune: ${tunes}">
