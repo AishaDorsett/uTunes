@@ -80,6 +80,14 @@ html, body {
 ::-ms-input-placeholder {
   color: rgba(209, 131, 21, 0.8);
 }
+/* 
+input, select, textarea{
+  color: #ff0000;
+}
+
+textarea:focus, input:focus {
+  color: #ff0000;
+} */
 
 /* submit button */
 .submit, .reset {
