@@ -10,7 +10,6 @@ public class HelloController {
 	@GetMapping("/")
 	public RedirectView index() {
 		// return "homepage/index.html";
-		return new RedirectView("/users/new");
+		return new RedirectView("/tunes");
 	}
-
 }
