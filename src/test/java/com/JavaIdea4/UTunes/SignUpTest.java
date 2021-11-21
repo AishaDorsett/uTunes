@@ -54,6 +54,7 @@ public class SignUpTest {
         driver.findElement(By.id("submit")).click();
 
         Assertions.assertEquals("http://localhost:8080/tunes",driver.getCurrentUrl());
+        // Assertions.assertEquals("http://localhost:8080/login",driver.getCurrentUrl());
     }
 
 }

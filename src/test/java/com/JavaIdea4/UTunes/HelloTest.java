@@ -44,9 +44,10 @@ public class HelloTest {
     }
 
     @Test
-    public void checksHeaderSaysHello(){ 
+    public void checksThatFirstPageIsLogin(){ 
         driver.get("http://localhost:8080/");
         Assertions.assertEquals("Sign Up",driver.findElement(By.tagName("p")).getText());
+        // Assertions.assertEquals("Please sign in",driver.findElement(By.tagName("h1")).getText());
     }
 
     @Test
