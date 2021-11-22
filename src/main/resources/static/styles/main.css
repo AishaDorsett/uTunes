@@ -204,3 +204,11 @@ textarea:focus, input:focus {
       width: 70%;
   }
 }
+
+/* favourites page */
+.faves-body {
+  text-align: center;
+  font-family: Audiowide;
+  color: rgba(209, 131, 21, 0.7);
+
+}
