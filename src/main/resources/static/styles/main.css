@@ -19,24 +19,36 @@ body {
 
 /* navbar */
 .navbar {
+  background-color: transparent !important;
+  display: inline;
   padding: 0.15rem;
-  margin: 0;
+  margin-bottom: 0;
   text-align: center;
+  margin: auto;
+  padding: 1rem;
 }
 
-/* all navbar text */
-.navbar li {
+/* all /search navbar text */
+#search-navbar li {
   display: inline;
-  padding-left:20px;
-  padding-right:20px;
+  padding-right: 150px;
 }
+
+/* all /login navbar text */
+#login-navbar li {
+  display: inline;
+  padding-right: 20px;
+  /* padding-left: 20px; */
+}
+
+/* #login-navbar {
+  display:inline-block;
+} */
 
 /* all navbar text continued... */
 .navbar a {
   text-decoration: none;
   text-align: center;
-  color: rgb(0, 0, 0);
-  padding: 0.5rem;
   display: inline-block;
   color: rgba(209, 131, 21, 0.7);
 }
@@ -44,11 +56,21 @@ body {
 /* uTunes text size */
 .navbar-brand, .title {
   font-size: 30px;
+  color: rgba(209, 131, 21, 0.7);
+}
+
+/* aligning logout page navbar text */
+.logout-navbar {
+  display:inline-block;
+  margin: 0.2rem;
+  text-align: right;
+  margin-left: 1rem;
 }
 
 /* non-uTunes navbar text */
-.nav-item {
+.nav-item, .create-account-text {
   font-size: 15px;
+  color: rgba(209, 131, 21, 0.7);
 }
 
 /* genre picker - entire form */
@@ -72,6 +94,7 @@ body {
   opacity: 0.7;
 }
 
+/* logout submit button spacing */
 .form-actions {
   margin-top: 0.8rem;
 }
@@ -79,6 +102,11 @@ body {
 /* spacing between sign-in-fields and "You have been logged out" */
 .agileits-top {
   margin-top: 0.8rem;
+}
+
+/* "Bad credentials" / "You have been logged out" background opacity */
+.alert {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Placeholder colour - Chrome, Firefox, Opera, Safari 10.1+ */
@@ -129,7 +157,6 @@ textarea:focus, input:focus {
   color: rgba(174, 109, 18, 0.3);
 }
 
-
 /* favourites page */
 .faves-body {
   text-align: center;
@@ -139,12 +166,12 @@ textarea:focus, input:focus {
 
 /* login page logo */
 .logo {
-  display: block;
-  padding-top: 20px;
+  /* display: block; */
+  padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 45%;
+  margin-left: 10px;
+  /* margin-right: 10px; */
+  width: 8%;
 }
 
 /* "Please sign in" */

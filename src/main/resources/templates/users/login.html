@@ -20,13 +20,28 @@
   <link th:href="@{/styles/main.css}" rel="stylesheet" />
 </head>
 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="login-navbar">
+    <img class="logo" id="logo" src="images/record-favicon-red.png">
+    <ul class="logout-navbar">
+      <li>
+        <a class="title">uTunes</a>
+      </li>
+      <li class="nav-item">
+        <a>New to uTunes?</a>
+      </li>
+      <li class="nav-item">
+        <a href="users/new">Create an account</a></h6>
+      </li>
+    </ul>
+  </nav>
+
 <body>
   <div class="container">
     <div class="main-w3layouts wrapper">
       <div tiles:fragment="content" style="text-align:center;">
         <form name="f" th:action="@{/login}" method="post">
           <fieldset>
-            <img class="logo" id="logo" src="images/record-favicon-red.png">
             <legend>
               <div class="sign-in-page-text">
                 <h1>Please sign in</h1>
@@ -43,9 +58,7 @@
                 <input class="sign-in-fields" type="text" id="username" name="username" placeholder="Username" required /><br>
                 <input class="sign-in-fields" type="password" id="password" name="password" placeholder="Password" required /><br>
                 <div class="form-actions">
-                  <button type="submit" class="submit"
-                  >Sign
-                    in</button>
+                  <button type="submit" class="submit">Sign in</button>
                 </div>
               </div>
             </div>
@@ -53,10 +66,6 @@
           </fieldset>
         </form>
       </div>
-    </div>
-    <div class="create-account-text">
-      <h3>New to uTunes?</h3>
-      <a href="users/new">Create an account</a>
     </div>
   </div>
 
