@@ -2,6 +2,8 @@ package com.JavaIdea4.UTunes.model;
 
 import javax.persistence.*;
 
+import static java.lang.Boolean.TRUE;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 // import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,14 +16,22 @@ public class User {
   private Long id;
   private String username;
   private String password;
+  private boolean enabled;
 
   public User() {
-
+    this.enabled = TRUE;
   }
 
   public User(String username, String password) {
     this.username = username;
     this.password = password;
+    this.enabled = TRUE;
+  }
+
+  public User(String username, String password, boolean enabled) {
+    this.username = username;
+    this.password = password;
+    this.enabled = enabled;
   }
 
   public Long getId() {
