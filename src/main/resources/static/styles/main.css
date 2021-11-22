@@ -95,7 +95,7 @@ body {
 }
 
 /* spacing between sign-in-fields and "You have been logged out" */
-.agileits-top {
+.agileits-top, .signup-form {
   margin-top: 0.8rem;
 }
 
