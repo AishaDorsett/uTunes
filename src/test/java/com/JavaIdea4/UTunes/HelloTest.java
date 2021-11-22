@@ -1,5 +1,7 @@
 package com.JavaIdea4.UTunes;
 import com.JavaIdea4.UTunes.controller.HelloController;
+import com.github.javafaker.Faker;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
@@ -27,7 +29,7 @@ import org.springframework.beans.factory.annotation.Value;
 @SpringBootTest(classes = UTunesApplication.class)
 @TestInstance(Lifecycle.PER_CLASS)
 public class HelloTest {
-
+    Faker faker;
     WebDriver driver;
     @Value("${spring.datasource.chromedriver}")
     private String chromedriver;
@@ -36,6 +38,7 @@ public class HelloTest {
     public void setup() {
         System.setProperty("webdriver.chrome.driver",chromedriver );
         driver = new ChromeDriver();
+        faker = new Faker();
     }
 
     @AfterAll
@@ -46,8 +49,8 @@ public class HelloTest {
     @Test
     public void checksThatFirstPageIsLogin(){ 
         driver.get("http://localhost:8080/");
-        Assertions.assertEquals("Sign Up",driver.findElement(By.tagName("p")).getText());
-        // Assertions.assertEquals("Please sign in",driver.findElement(By.tagName("h1")).getText());
+        // Assertions.assertEquals("Sign Up",driver.findElement(By.tagName("p")).getText());
+        Assertions.assertEquals("Please sign in",driver.findElement(By.tagName("h1")).getText());
     }
 
     @Test
@@ -60,6 +63,19 @@ public class HelloTest {
 
         // Assertions.assertTrue(result.contains("King Kunta"));
 
+        // signup
+        driver.get("http://localhost:8080/users/new");
+        String name = faker.name().firstName();
+        driver.findElement(By.id("username")).sendKeys(name);
+        driver.findElement(By.id("password")).sendKeys("password");
+        driver.findElement(By.id("submit")).click();
+
+        // sign in
+        driver.findElement(By.id("username")).sendKeys(name);
+        driver.findElement(By.id("password")).sendKeys("password");
+        driver.findElement(By.xpath("//button")).click();
+
+
         driver.get("http://localhost:8080/tunes");
         var input = driver.findElement(By.xpath("//input[@list='genre']"));
         var dropdown = driver.findElement(By.xpath("//*[@id='genre']/option[3]"));
@@ -67,7 +83,7 @@ public class HelloTest {
         input.sendKeys(value);
         driver.findElement(By.id("submit")).click();
 
-        String result = driver.findElement(By.tagName("div")).getText(); // needed for the asserTrue format(it did not want to accept this code inside)
+        String result = driver.findElement(By.tagName("h4")).getText(); // needed for the asserTrue format(it did not want to accept this code inside)
 
         Assertions.assertTrue(result.contains("King Kunta"));
     }
