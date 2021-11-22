@@ -116,7 +116,7 @@ textarea:focus, input:focus {
   background-color: rgba(255, 255, 255, 0.103);
   border-color:rgba(255, 255, 255, 0.123);
   color: rgba(209, 131, 21, 0.8);
-  font-size: 16px;
+  font-size: 12px;
 }
 
 /* second styling option for the favourites button, based on the submit and reset */
