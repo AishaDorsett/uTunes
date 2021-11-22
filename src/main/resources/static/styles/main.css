@@ -35,15 +35,18 @@ body {
 }
 
 /* all /login navbar text */
-#login-navbar li {
+#login-navbar li, #signup-navbar li {
   display: inline;
   padding-right: 20px;
-  /* padding-left: 20px; */
+  padding-left: 20px;
 }
-
-/* #login-navbar {
+/* aligning login/signup page navbar text */
+.login-navbar, .signup-navbar {
   display:inline-block;
-} */
+  margin: 0.2rem;
+  text-align: right;
+  margin-left: 2rem;
+}
 
 /* all navbar text continued... */
 .navbar a {
@@ -57,14 +60,6 @@ body {
 .navbar-brand, .title {
   font-size: 30px;
   color: rgba(209, 131, 21, 0.7);
-}
-
-/* aligning logout page navbar text */
-.logout-navbar {
-  display:inline-block;
-  margin: 0.2rem;
-  text-align: right;
-  margin-left: 1rem;
 }
 
 /* non-uTunes navbar text */
@@ -165,7 +160,7 @@ textarea:focus, input:focus {
 }
 
 /* login page logo */
-.logo {
+#logo {
   /* display: block; */
   padding-top: 10px;
   padding-bottom: 10px;
