@@ -30,6 +30,11 @@ public class TuneController {
 		// return search;
 	}
 
+	@GetMapping("/tunes/favourites")
+	public String favourites() {
+    	return "homepage/favourites.html";
+	}
+
 
 	// @PostMapping("/search")
 	// public RedirectView create(@ModelAttribute Tune tune) {
