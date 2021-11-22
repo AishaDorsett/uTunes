@@ -43,8 +43,8 @@ public class FavouritesController {
       User thisUsers = userRepository.findByUsername(principal.getName()).get(0);
       Tune thisTune = tuneRepository.findById(id).get();
       Favourite fave = new Favourite(thisUsers.getId());
-      fave.setPost(thisPost);
-      favouriteRepository.save(fave);
+      fave.setTune(thisTune);
+      FavouriteRepository.save(fave);
       return new RedirectView("/tunes");
     }
 }
