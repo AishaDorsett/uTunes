@@ -33,10 +33,8 @@
   <!-- genre selector -->
   <div>
   <form class="selectgenre" action ="#" th:action="@{/tunes/search}" th:object="${tune}" method="get" enctype="multipart/form-data">
-
       <a class="select-a-genre">Select a genre:</a>
-          <input class= "dropdown" type="text" list="genre" name="genre"> 
-
+          <input class= "dropdown" type="text" list="genre" name="genre">
           <datalist id="genre">
             <option value="Contemporary Jazz">Contemporary Jazz</option>
             <option value="Doo Wop">Doo Wop</option>

@@ -256,8 +256,9 @@ textarea:focus, input:focus {
   background: #fff;
   border-radius: 5px;
   width: 35%;
-  position: absolute;
-  transition: all 5s ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
+  position: relative;
+  top: 5%;
 }
 
 /* This changes the Font of the title */
