@@ -61,23 +61,34 @@ body {
 }
 
 /* dropdown menu / signup inputs */
-.dropdown, .signup-fields {
+.dropdown, .signup-fields, .sign-in-fields {
   padding: 0.5rem;
   color: rgba(209, 131, 21, 1);
   text-align: left;
   margin-bottom: 0.5rem;
-  background-color: rgba(174, 109, 18, 0.3);
+  background-color: rgba(174, 109, 18, 0.4);
   border-color: rgba(55, 55, 55, 0.5);
   border-width: 2px;
   opacity: 0.7;
 }
 
+.form-actions {
+  margin-top: 0.8rem;
+}
+
+/* spacing between sign-in-fields and "You have been logged out" */
+.agileits-top {
+  margin-top: 0.8rem;
+}
+
 /* Placeholder colour - Chrome, Firefox, Opera, Safari 10.1+ */
 ::placeholder {
+  text-indent: 1em;
   color: rgba(209, 131, 21, 0.9);
 }
 /* Placeholder colour - Internet Explorer 10-11, Microsoft Edge */
 ::-ms-input-placeholder {
+  text-indent: 1em;
   color: rgba(209, 131, 21, 0.9);
 }
 /* 
@@ -92,10 +103,10 @@ textarea:focus, input:focus {
 /* submit button */
 .submit, .reset {
   padding: 0.5rem;
-  color: rgba(209, 131, 21, 0.8);
+  color: rgba(209, 131, 21, 0.9);
   text-align: center;
   margin-bottom: 0.5rem;
-  background-color: rgba(174, 109, 18, 0.3);
+  background-color: rgba(174, 109, 18, 0.5);
   border-color: rgba(55, 55, 55, 0.5);
   border-width: 2px;
   opacity: 0.7;
@@ -116,6 +127,55 @@ textarea:focus, input:focus {
   margin: auto;
   width: 50%;
   color: rgba(174, 109, 18, 0.3);
+}
+
+
+/* favourites page */
+.faves-body {
+  text-align: center;
+  font-family: Audiowide;
+  color: rgba(209, 131, 21, 0.7);
+}
+
+/* login page logo */
+.logo {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
+/* "Please sign in" */
+.sign-in-page-text {
+  font-size: 30px;
+  color: rgba(209, 131, 21, 0.8);
+  text-align: center;
+}
+
+/* "New to uTunes?" */
+.create-account-text {
+  font-size: 25px;
+  color: rgba(209, 131, 21, 0.8);
+  text-align: center;
+}
+
+/* "Create an account" */
+.create-account-text a {
+  font-size: 20px;
+  text-align: center;
+  color: rgba(209, 131, 21, 0.8);
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+
+/* "Bad credentials" / "You have been logged out" */
+.alert {
+  box-sizing: border-box;
+  padding: 5px;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 /* ******************** Ana ******************** */
@@ -202,11 +262,4 @@ textarea:focus, input:focus {
   .popup {
     width: 70%;
   }
-}
-
-/* favourites page */
-.faves-body {
-  text-align: center;
-  font-family: Audiowide;
-  color: rgba(209, 131, 21, 0.7);
 }
