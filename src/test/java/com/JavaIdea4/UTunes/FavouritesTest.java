@@ -39,6 +39,17 @@ public class FavouritesTest {
         System.setProperty("webdriver.chrome.driver", chromedriver);
         driver = new ChromeDriver();
         faker = new Faker();
+        // signup
+        driver.get("http://localhost:8080/users/new");
+        String name = faker.name().firstName();
+        driver.findElement(By.id("username")).sendKeys(name);
+        driver.findElement(By.id("password")).sendKeys("password");
+        driver.findElement(By.id("submit")).click();
+
+        // sign in
+        driver.findElement(By.id("username")).sendKeys(name);
+        driver.findElement(By.id("password")).sendKeys("password");
+        driver.findElement(By.xpath("//button")).click();
     }
 
     @AfterAll
