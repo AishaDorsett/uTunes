@@ -5,6 +5,28 @@
   <link th:href="@{/styles/main.css}" rel="stylesheet" />
 </head>
 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="search-navbar">
+    <ul>
+      <li>
+        <a class="navbar-brand">uTunes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="nav-search"href="/tunes">Search</a>
+      </li>
+      <li class="nav-item">
+        <a id="nav-link" href="#popup1"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+          <div id="popup1" class="overlay">
+            <div class="popup">
+              <h2>Are you sure you want to log out?</h2>
+              <a class="close" href="/logout">Yes</a><br /><br />
+              <a class="close" href="#">No</a>
+            </div>
+          </div>
+      </li>
+    </ul>
+  </nav>
+
 <body class="faves-body">
     <h1 class="faves-header">My Favourite Tunes</h1>
 </body>

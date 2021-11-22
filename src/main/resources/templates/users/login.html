@@ -16,7 +16,25 @@
   <!-- web font -->
   <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="/main.css" />
+  <link rel="icon" href="https://icons.iconarchive.com/icons/webalys/kameleon.pics/512/Record-Player-icon.png" sizes="any">
+  <link th:href="@{/styles/main.css}" rel="stylesheet" />
 </head>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="login-navbar">
+    <img class="logo" id="logo" src="images/record-favicon-red.png">
+    <ul class="login-navbar">
+      <li>
+        <a class="title">uTunes</a>
+      </li>
+      <li class="nav-item">
+        <a>New to uTunes?</a>
+      </li>
+      <li class="nav-item">
+        <a href="users/new">Create an account</a></h6>
+      </li>
+    </ul>
+  </nav>
 
 <body>
   <div class="container">
@@ -24,27 +42,23 @@
       <div tiles:fragment="content" style="text-align:center;">
         <form name="f" th:action="@{/login}" method="post">
           <fieldset>
-            <img id="logo" src="images/record-favicon-red.png">
             <legend>
-              <div class="white-font">
+              <div class="sign-in-page-text">
                 <h1>Please sign in</h1>
               </div>
             </legend>
             <div th:if="${param.error}" class="alert alert-error" style="color:red">
               Bad credentials
-            </div><br>
+            </div>
             <div th:if="${param.logout}" class="alert alert-success" style="color:green">
-              You have been logged out.
-            </div><br>
+              You have been logged out
+            </div>
             <div class="main-agileinfo">
               <div class="agileits-top">
-                <input class="text" type="text" id="username" name="username" placeholder="Username" required /><br>
-                <input class="text" type="password" id="password" name="password" placeholder="Password"
-                  required /><br><br>
+                <input class="sign-in-fields" type="text" id="username" name="username" placeholder="Username" required /><br>
+                <input class="sign-in-fields" type="password" id="password" name="password" placeholder="Password" required /><br>
                 <div class="form-actions">
-                  <button type="submit" class="btn"
-                    style="background:#337ab7;color:white; border-radius: 14px; padding:10px; width: 100%">Sign
-                    in</button>
+                  <button type="submit" class="submit">Sign in</button>
                 </div>
               </div>
             </div>
@@ -52,10 +66,6 @@
           </fieldset>
         </form>
       </div>
-    </div>
-    <div class="white-font">
-      <h3 style="font-size: 25px;">New to UTunes?</h3><br>
-      <a href="users/new">Create new account</a>
     </div>
   </div>
 
