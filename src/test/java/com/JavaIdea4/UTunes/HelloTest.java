@@ -44,17 +44,29 @@ public class HelloTest {
     }
 
     @Test
-    public void checksHeaderSaysHello(){ 
+    public void checksThatFirstPageIsLogin(){ 
         driver.get("http://localhost:8080/");
-        Assertions.assertEquals("Hello",driver.findElement(By.tagName("h1")).getText());
+        Assertions.assertEquals("Sign Up",driver.findElement(By.tagName("p")).getText());
+        // Assertions.assertEquals("Please sign in",driver.findElement(By.tagName("h1")).getText());
     }
 
     @Test
     public void userCanSearchByGenre() {
+        // driver.get("http://localhost:8080/tunes");
+        // Select dropdown = new Select(driver.findElement(By.id("select")));
+        // dropdown.selectByValue("Hip Hop");
+        // driver.findElement(By.id("submit")).click();
+        // String result = driver.findElement(By.tagName("div")).getText(); // needed for the asserTrue format(it did not want to accept this code inside)
+
+        // Assertions.assertTrue(result.contains("King Kunta"));
+
         driver.get("http://localhost:8080/tunes");
-        Select dropdown = new Select(driver.findElement(By.id("select")));
-        dropdown.selectByValue("Hip Hop");
+        var input = driver.findElement(By.xpath("//input[@list='genre']"));
+        var dropdown = driver.findElement(By.xpath("//*[@id='genre']/option[3]"));
+        var value = dropdown.getAttribute("value");
+        input.sendKeys(value);
         driver.findElement(By.id("submit")).click();
+
         String result = driver.findElement(By.tagName("div")).getText(); // needed for the asserTrue format(it did not want to accept this code inside)
 
         Assertions.assertTrue(result.contains("King Kunta"));
