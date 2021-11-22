@@ -6,7 +6,7 @@
 }
 
 /* body */
-html, body {
+body {
   background-image: url("../images/utunes-background.jpg") !important; 
   background-color: rgba(0, 0, 0, 0.45);
   background-blend-mode: multiply;
@@ -60,27 +60,25 @@ html, body {
   margin-bottom: 0.5rem;
 }
 
-
-
 /* dropdown menu / signup inputs */
 .dropdown, .signup-fields {
   padding: 0.5rem;
-  color: rgba(209, 131, 21, 0.8);
+  color: rgba(209, 131, 21, 1);
   text-align: left;
   margin-bottom: 0.5rem;
   background-color: rgba(174, 109, 18, 0.3);
   border-color: rgba(55, 55, 55, 0.5);
   border-width: 2px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /* Placeholder colour - Chrome, Firefox, Opera, Safari 10.1+ */
 ::placeholder {
-  color: rgba(209, 131, 21, 0.8);
+  color: rgba(209, 131, 21, 0.9);
 }
 /* Placeholder colour - Internet Explorer 10-11, Microsoft Edge */
 ::-ms-input-placeholder {
-  color: rgba(209, 131, 21, 0.8);
+  color: rgba(209, 131, 21, 0.9);
 }
 /* 
 input, select, textarea{
@@ -101,6 +99,7 @@ textarea:focus, input:focus {
   border-color: rgba(55, 55, 55, 0.5);
   border-width: 2px;
   opacity: 0.7;
+  border-style: none;
 }
 
 /* suggestions text */
@@ -197,11 +196,11 @@ textarea:focus, input:focus {
 /* No idea */
 @media screen and (max-width: 700px) {
   .box {
-      width: 70%;
+    width: 70%;
   }
 
   .popup {
-      width: 70%;
+    width: 70%;
   }
 }
 
@@ -210,5 +209,4 @@ textarea:focus, input:focus {
   text-align: center;
   font-family: Audiowide;
   color: rgba(209, 131, 21, 0.7);
-
 }
