@@ -21,14 +21,18 @@ public class Tune {
 	@Column(name = "genre")
 	private String genre;
 
+	@Column(name = "link")
+	private String link;
+
 	public Tune() {
 
 	}
 
-	public Tune(String trackname, String artistname, String genre) {
+	public Tune(String trackname, String artistname, String genre, String link) {
 		this.trackname = trackname;
 		this.artistname = artistname;
 		this.genre = genre;
+		this.link = link;
 	}
 
 	public long getId() {
@@ -59,8 +63,16 @@ public class Tune {
 		this.genre = genre;
 	}
 
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
 	@Override
 	public String toString() {
-		return "[id=" + id + ", Trackname=" + trackname + ", Artist=" + artistname + ", Genre=" + genre + "]";
+		return "[id=" + id + ", Trackname=" + trackname + ", Artist=" + artistname + ", Genre=" + genre + ", Link=" + link +"]";
 	}
 }

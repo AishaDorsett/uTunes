@@ -145,6 +145,16 @@ textarea:focus, input:focus {
   color: rgba(209, 131, 21, 0.7);
 }
 
+/* stop trackname being blue */
+#trackname {
+  color: rgba(209, 131, 21, 0.7);
+  text-decoration: none;
+}
+
+#trackname:hover {
+  color: #858585;
+}
+
 /* The add to favourites button */
 #add {
   background-color: rgba(255, 255, 255, 0.103);
