@@ -1,11 +1,11 @@
-INSERT INTO tunes (trackname, artistname, genre)
+INSERT INTO tunes (trackname, artistname, genre, link)
 
 VALUES
-  ('Earth Angel', 'The Penguins', 'Doo Wop'),
-  ('Blue Moon', 'The Marcels', 'Doo Wop'),
-  ('Put Your Head On My Shoulders', 'Paul Anka', 'Doo Wop'),
-  ('Teenager In Love', 'Dion DiMucci', 'Doo Wop'),
-  ('Pretty Woman', 'Roy Orbison', 'Doo Wop'),
+  ('Earth Angel', 'The Penguins', 'Doo Wop', ''),
+  ('Blue Moon', 'The Marcels', 'Doo Wop', ''),
+  ('Put Your Head On My Shoulders', 'Paul Anka', 'Doo Wop', ''),
+  ('Teenager In Love', 'Dion DiMucci', 'Doo Wop', ''),
+  ('Pretty Woman', 'Roy Orbison', 'Doo Wop', ''),
   ('End Of The Road', 'Boyz 2 Men', 'R&B'),
   ('Confessions', 'Usher', 'R&B'),
   ('Differences', 'Ginuwine', 'R&B'),
