@@ -49,11 +49,6 @@ public class TuneController {
     	return "homepage/favourites.html";
 	}
 
-	@GetMapping("/add/favourites")
-	public String addFavourites() {
-		return "homepage/favourites.html";
-	}
-
 	@GetMapping("/tune/{id}")
 	public RedirectView save(@PathVariable Long id, @ModelAttribute Tune tune) {
 		repository.save(tune);
@@ -61,16 +56,16 @@ public class TuneController {
 	}
 
 	@GetMapping("/add/{id}")
-	public String addTune(@PathVariable Long id, Model model, Principal principal) {
+	public RedirectView addTune(@PathVariable Long id, Model model, Principal principal) {
 		// Tune tune = repository.findById(id).get();
 		model.addAttribute("tune", id);
 		User thisUsers = userRepository.findByUsername(principal.getName()).get(0);
 		Favourite fave = new Favourite(thisUsers.getId(), id);
 		favouriteRepository.save(fave);
-		return "homepage/favourites.html";
+		return new RedirectView("/tunes/favourites");
 	}
 
-	@PostMapping("/add")
+	@PostMapping("/tunes/favourites")
 	// public RedirectView tune(@ModelAttribute Tune tune) {
 	// 	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 	// 	String username = ((UserDetails) principal).getUsername();

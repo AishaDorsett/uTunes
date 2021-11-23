@@ -38,7 +38,7 @@ public class FavouritesController {
       return new RedirectView("/tunes");
     }
   
-    @PostMapping("/posts/{id}/favourites")
+    @PostMapping("/tunes/{id}/favourites")
     public RedirectView fave(@PathVariable("id") Long id, Principal principal) {
       User thisUsers = userRepository.findByUsername(principal.getName()).get(0);
       Tune thisTune = tuneRepository.findById(id).get();

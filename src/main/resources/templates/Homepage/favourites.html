@@ -3,20 +3,32 @@
 <head lang="en">
   <meta charset="UTF-8" />
   <title>uTunes</title>
+  <link rel="icon" href="https://icons.iconarchive.com/icons/webalys/kameleon.pics/512/Record-Player-icon.png" sizes="any">
   <link th:href="@{/styles/main.css}" rel="stylesheet" />
 </head>
 
 <body class="faves-body">
-    <h1 class="faves-header">My Favourite Tunes</h1>
-    <!-- <th:block th:each="fave: ${favourites}">
+  <h1 class="faves-header">My Favourite Tunes</h1>
+
+  <!-- <p>hello</p>
+    <th:block class="favourites" th:each="favourite: ${favourites}">
+      <p>hello</p>
+      <p><span class="tune" th:text="${favourite.tune_id}"></span></p>
+  </th:block> -->
+  <!-- <th:block class="favourites" th:each="favourite: ${favourites}">
+  
+  <form action=“#” th:action=“@{/add}” th:object=“${tune}” method=“post” enctype=“multipart/form-data”>
+    <input type=“hidden” th:value=“${favourite.tune_id}” id=“id” name=“id” />
+    <input type=“hidden” th:value=“${favourite.user_id}” id=“user” name=“user” />
+    <div class=“edit-content”><input type=“text” th:field=“*{content}” name=“content” /></div>
     <div class="tune-body">
-      <h3><p class="tune-text" th:text="${fave}"></h3>
-    </div>
-  <th:block th:each="tune: ${tunes}">
-  <div class="agileits-top">
-    <form action="#" th:action="@{/add}" th:object="${tune}" method="post" enctype="multipart/form-data">
-      <!-- <input type="hidden" th:value="${tune.id}" id="id" name="id" /> -->
-      <th:block th:each="tune: ${tunes}">
+      <h3><p class="tune-text" th:text="${tune.getArtistname()}"></h3>
+      <h4><p id="trackname" class="tune-text" th:text="${tune.getTrackname()}" ></h4>
+      </div>
+  </form>
+</th:block> -->
+
+<th:block th:each="tune: ${tunes}">
         <div class="agileits-top">
         <form action="#" th:action="@{/add}" th:object="${tune}" method="post" enctype="multipart/form-data">
       <div class="tune-body">
@@ -26,6 +38,6 @@
     </form>
     </div>
   </th:block>
-  </div>
+  
 </body>
 </html>

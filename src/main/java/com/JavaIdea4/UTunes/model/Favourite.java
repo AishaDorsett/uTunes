@@ -42,12 +42,14 @@ public class Favourite {
   public Favourite(){
   }
 
-//   public Tune getTune() {
-//     return this.tune;
-// }
+  public String getTune() {
+    // return this.tune_id;
+    return "hello";
+    
+}
 
-// public void setTune(Tune Tune) {
-//   this.tune = Tune;
-// }
+public void setTune(Long tune_id) {
+  this.tune_id = tune_id;
+}
 
 }
