@@ -42,8 +42,8 @@ public class FavouritesController {
     public RedirectView fave(@PathVariable("id") Long id, Principal principal) {
       User thisUsers = userRepository.findByUsername(principal.getName()).get(0);
       Tune thisTune = tuneRepository.findById(id).get();
-      Favourite fave = new Favourite(thisUsers.getId());
-      fave.setTune(thisTune);
+      Favourite fave = new Favourite(thisUsers.getId(), id);
+    //   fave.setTune(thisTune);
       FavouriteRepository.save(fave);
       return new RedirectView("/tunes");
     }

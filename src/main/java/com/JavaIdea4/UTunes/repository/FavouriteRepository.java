@@ -11,8 +11,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-// @Repository
+@Repository
 public interface FavouriteRepository extends PagingAndSortingRepository<Favourite, Long> {
-  List<Favourite> findAllById(Long id);
-  List<Favourite> findAllByTuneId(Long tune_id);
+//   List<Favourite> findAllById(Long id);
+//   List<Favourite> findAllBytune_id(Long tune_id);
 }

@@ -28,24 +28,26 @@ public class Favourite {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private long user_id;
-  @ManyToOne
-  @JoinColumn(name = "tune_id")
-  public Tune tune;
+  private long tune_id;
 
-  public Favourite(long user_id) {
+//   @ManyToMany
+//   @JoinColumn(name = "tune_id")
+//   public Tune tune;
+
+  public Favourite(long user_id, long tune_id) {
     this.user_id = user_id;
-    
+    this.tune_id = tune_id;
   }
 
   public Favourite(){
   }
 
-  public Tune getTune() {
-    return this.tune;
-}
+//   public Tune getTune() {
+//     return this.tune;
+// }
 
-public void setTune(Tune Tune) {
-  this.tune = Tune;
-}
+// public void setTune(Tune Tune) {
+//   this.tune = Tune;
+// }
 
 }
