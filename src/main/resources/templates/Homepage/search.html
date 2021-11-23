@@ -64,6 +64,10 @@
                   <div class="tune-body">
                     <h3><p class="tune-text" th:text="${tune.getArtistname()}"></h3>
                     <h4><p id="trackname" class="tune-text" th:text="${tune.getTrackname()}" ></h4>
+                      <form href="/tunes/favourites" th:action="@{/add/favourites}" th:object="${tune}" method="get" enctype="multipart/form-data">
+                        <input type="hidden" th:value="${tune.id}" id="tune" name="tune" />
+                        <button id="add" type="submit" >Add to Favourites</button>
+                      </form>
                   </div>
                 </div>
               </div>
