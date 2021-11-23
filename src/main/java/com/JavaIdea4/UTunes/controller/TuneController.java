@@ -2,6 +2,7 @@ package com.JavaIdea4.UTunes.controller;
 
 import com.JavaIdea4.UTunes.model.Tune;
 import com.JavaIdea4.UTunes.repository.TuneRepository;
+import com.JavaIdea4.UTunes.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,8 @@ public class TuneController {
 
 	@Autowired
 	TuneRepository repository;
+	@Autowired
+	UserRepository userRepository;
 
 	@GetMapping("/tunes")
 	public String listtunes(Model model) { // why do we need Model? It works without...
@@ -35,17 +38,14 @@ public class TuneController {
     	return "homepage/favourites.html";
 	}
 
-	@GetMapping("/add/favourites")
-	public String addFavourites() {
-		return "homepage/favourites.html";
-	}
-
-
-	// @PostMapping("/search")
-	// public RedirectView create(@ModelAttribute Tune tune) {
-	//   repository.save(tune);
-	// 	return new RedirectView("/search");
+	// @GetMapping("/add/favourites")
+	// public String addFavourites() {
+	// 	return "homepage/favourites.html";
 	// }
-
-	
+		@GetMapping("/add/{id}")
+		public String addTune(Model model) {
+			model.addAttribute("userId", userRepository.findAll());
+			model.addAttribute("tuneId", repository.findAll());
+			return "homepage/favourites.html";
+		}
 }
