@@ -267,14 +267,14 @@ textarea:focus, input:focus {
 
 /* This is the actual box that contains our logout content */
 .popup {
-  margin: 70px auto;
-  padding: 40px;
+  margin: auto;
+  padding: 10px;
   background: #fff;
   border-radius: 5px;
   width: 35%;
   /* transition: all 0.4s ease-in-out; */
   position: relative;
-  top: 5%;
+  top: 40%;
 }
 
 /* This changes the Font of the title */
