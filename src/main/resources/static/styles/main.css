@@ -274,7 +274,7 @@ textarea:focus, input:focus {
   width: 35%;
   /* transition: all 0.4s ease-in-out; */
   position: relative;
-  top: 5%;
+  top: 9rem;
 }
 
 /* This changes the Font of the title */
