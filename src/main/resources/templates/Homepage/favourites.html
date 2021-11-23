@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"></html>
 <head lang="en">
   <meta charset="UTF-8" />
   <title>uTunes</title>
@@ -12,8 +13,14 @@
       <h3><p class="tune-text" th:text="${fave}"></h3>
     </div>
   </th:block> -->
+  <div class="agileits-top">
+    <form action="#" th:action="@{/add}" th:object="${tune}" method="post" enctype="multipart/form-data">
+      <input type="hidden" th:value="${tune.id}" id="id" name="id" />
+      <div class="tune-body">
+        <h3><p class="tune-text" th:text="${tune.getArtistname()}"></h3>
+        <h4><p id="trackname" class="tune-text" th:text="${tune.getTrackname()}" ></h4>
+      </div>
+    </form>
+  </div>
 </body>
-
-
-
 </html>
