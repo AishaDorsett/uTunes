@@ -30,15 +30,17 @@
 
 <body class="faves-body">
     <h1 class="faves-header">My Favourite Tunes</h1>
-    <tr th:each="user: ${userId}">
-      <td th:text="{$user.username}"></td>
+    <!-- <tr th:each="user: ${userId}">
+      <td th:text="${user.id}"></td> -->
       <td><a th:href="@{/favourite}" th:text="Description">Description</a></td>
-      <td th:each="tune : ${user.tune}">
+      <td th:each="tune : ${tunes}">
         <ul>
           <li th:text= ${tune.getTrackname()}></li>
+          <h3><a class="tune-text" th:text="${tune.getArtistname()}"></h3>
+          <h4><a id="trackname" class="tune-text" th:text="${tune.getTrackname()}" th:href="${tune.getLink()}" target="_blank"></h4>
         </ul>
       </td>
-    </tr>
+    <!-- </tr> -->
 </body>
 
 

@@ -6,6 +6,7 @@ import static java.lang.Boolean.TRUE;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import javax.persistence.OneToMany;
@@ -21,11 +22,11 @@ public class User {
   private String password;
   private boolean enabled;
 
-  @OneToMany(cascade = CascadeType.ALL)
+  @ManyToMany(cascade = CascadeType.ALL)
   @JoinTable(name = "favourites",
               joinColumns = @JoinColumn(name = "user_id"),
               inverseJoinColumns = @JoinColumn(name = "tune_id"))
-  private List<Tune> tune = new ArrayList<>();
+  public Set<Tune> tunes;
 
 
 
