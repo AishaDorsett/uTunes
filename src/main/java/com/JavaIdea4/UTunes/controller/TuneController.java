@@ -56,15 +56,15 @@ public class TuneController {
 			return "homepage/favourites.html";
 		}
 
-		// @RequestMapping("/tunes#popup2")
-    // public String signup(Model model) {
-    //     model.addAttribute("tune", new Tune());
-    //     return "/tunes#popup2";
-    // }
-		// @PostMapping("/tunes#popup2")
-    // public RedirectView signup(@ModelAttribute Tune tune) throws IOException {
-    //     repository.save(tune);
+		@GetMapping("/add/tunes")
+    public String addSongs(Model model) {
+        model.addAttribute("tune", new Tune());
+        return "homepage/addSong.html";
+    }
+		@PostMapping("/tunes#popup2")
+    public RedirectView signup(@ModelAttribute Tune tune) throws IOException {
+        repository.save(tune);
 
-    //     return new RedirectView("homepage/search.html");
-    // }
+        return new RedirectView("homepage/search.html");
+    }
 }
