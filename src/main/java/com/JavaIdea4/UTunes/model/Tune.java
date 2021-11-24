@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Tune {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@Column(name = "trackname")
