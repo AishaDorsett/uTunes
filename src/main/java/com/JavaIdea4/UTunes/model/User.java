@@ -4,9 +4,13 @@ import javax.persistence.*;
 
 import static java.lang.Boolean.TRUE;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
-// import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import javax.persistence.OneToMany;
+
 
 @Entity
 @Table(name = "USERS")
@@ -17,6 +21,14 @@ public class User {
   private String username;
   private String password;
   private boolean enabled;
+
+  @ManyToMany(cascade = CascadeType.ALL)
+  @JoinTable(name = "favourites",
+              joinColumns = @JoinColumn(name = "user_id"),
+              inverseJoinColumns = @JoinColumn(name = "tune_id"))
+  public Set<Tune> tunes;
+
+
 
   public User() {
     this.enabled = TRUE;
