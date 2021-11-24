@@ -13,6 +13,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 @Repository
 public interface FavouriteRepository extends PagingAndSortingRepository<Favourite, Long> {
-//   List<Favourite> findAllById(Long id);
+  List<Favourite> findAllById(Long id);
 //   List<Favourite> findAllBytune_id(Long tune_id);
 }
