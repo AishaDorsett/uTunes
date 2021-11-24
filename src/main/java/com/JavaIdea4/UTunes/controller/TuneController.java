@@ -2,6 +2,7 @@ package com.JavaIdea4.UTunes.controller;
 
 import java.security.Principal;
 import java.util.Set;
+import java.io.IOException;
 
 import com.JavaIdea4.UTunes.model.Tune;
 import com.JavaIdea4.UTunes.model.User;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class TuneController {
@@ -25,7 +27,7 @@ public class TuneController {
 	UserRepository userRepository;
 
 	@GetMapping("/tunes")
-	public String listtunes(Model model) { // why do we need Model? It works without...
+	public String listtunes(Model model) { 
 		return "homepage/search.html";
 	}
 	
@@ -34,7 +36,6 @@ public class TuneController {
 		Iterable<Tune> tunes = repository.findByGenre(genre);
 		model.addAttribute("tunes",tunes);
 		return "homepage/search.html";
-		// return search;
 	}
 
 	@GetMapping("/tunes/favourites")
@@ -42,10 +43,6 @@ public class TuneController {
     	return "homepage/favourites.html";
 	}
 
-	// @GetMapping("/add/favourites")
-	// public String addFavourites() {
-	// 	return "homepage/favourites.html";
-	// }
 		@GetMapping("/add/{id}")
 		public String addTune(@RequestParam Long id, Model model, Principal principal) {
 			User user = userRepository.findByUsername(principal.getName()).get(0);
@@ -58,4 +55,16 @@ public class TuneController {
 			model.addAttribute("tunes", tunes);
 			return "homepage/favourites.html";
 		}
+
+		// @RequestMapping("/tunes#popup2")
+    // public String signup(Model model) {
+    //     model.addAttribute("tune", new Tune());
+    //     return "/tunes#popup2";
+    // }
+		// @PostMapping("/tunes#popup2")
+    // public RedirectView signup(@ModelAttribute Tune tune) throws IOException {
+    //     repository.save(tune);
+
+    //     return new RedirectView("homepage/search.html");
+    // }
 }
