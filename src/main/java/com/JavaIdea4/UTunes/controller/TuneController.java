@@ -52,7 +52,7 @@ public class TuneController {
 	// 	return "homepage/favourites.html";
 	// }
 		@GetMapping("/add/{id}")
-		public String addTune(@RequestParam Long id, Model model, Principal principal) {
+		public RedirectView addTune(@RequestParam Long id, Model model, Principal principal) {
 			User user = userRepository.findByUsername(principal.getName()).get(0);
 			Tune tune = repository.findById(id).get();
 			user.tunes.add(tune);
@@ -61,6 +61,6 @@ public class TuneController {
 			model.addAttribute("tuneId", repository.findAll());
 			Set<Tune> tunes = user.tunes;
 			model.addAttribute("tunes", tunes);
-			return "homepage/favourites.html";
+			return new RedirectView("/tunes/favourites");
 		}
 }
