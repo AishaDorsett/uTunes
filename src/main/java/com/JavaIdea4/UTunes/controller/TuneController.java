@@ -62,8 +62,9 @@ public class TuneController {
         return "homepage/addSong.html";
     }
 		@PostMapping("/add/tunes")
-    public RedirectView signup(@ModelAttribute Tune tune) {
-        // repository.save(tune);
+    public RedirectView signup(@ModelAttribute Tune tune, Model model) {
+			model.addAttribute("tune", new Tune());
+      repository.save(tune);
 
         // return new RedirectView("homepage/search.html");
 				return new RedirectView("/tunes");
