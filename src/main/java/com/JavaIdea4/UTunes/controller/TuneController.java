@@ -61,10 +61,11 @@ public class TuneController {
         model.addAttribute("tune", new Tune());
         return "homepage/addSong.html";
     }
-		@PostMapping("/tunes#popup2")
-    public RedirectView signup(@ModelAttribute Tune tune) throws IOException {
-        repository.save(tune);
+		@PostMapping("/add/tunes")
+    public RedirectView signup(@ModelAttribute Tune tune) {
+        // repository.save(tune);
 
-        return new RedirectView("homepage/search.html");
+        // return new RedirectView("homepage/search.html");
+				return new RedirectView("/tunes");
     }
 }
