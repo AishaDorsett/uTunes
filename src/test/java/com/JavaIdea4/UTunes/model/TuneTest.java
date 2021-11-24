@@ -1,9 +1,12 @@
-package com.JavaIdea4.UTunes.model;
+// package com.JavaIdea4.UTunes.model;
 
-import static org.hamcrest.CoreMatchers.containsString;
+// import static org.hamcrest.CoreMatchers.containsString;
+
+
 // import org.junit.jupiter.api.Assertions;
 
 // import org.hamcrest.Matcher;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.jupiter.api.Test;
 
@@ -33,3 +36,4 @@ public class TuneTest {
     assertThat(tune.getLink(), containsString("https://www.youtube.com/watch?v=4m1EFMoRFvY"));
   }
 }
+
