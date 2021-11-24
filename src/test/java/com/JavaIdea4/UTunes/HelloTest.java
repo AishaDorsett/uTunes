@@ -55,14 +55,6 @@ public class HelloTest {
 
     @Test
     public void userCanSearchByGenre() {
-        // driver.get("http://localhost:8080/tunes");
-        // Select dropdown = new Select(driver.findElement(By.id("select")));
-        // dropdown.selectByValue("Hip Hop");
-        // driver.findElement(By.id("submit")).click();
-        // String result = driver.findElement(By.tagName("div")).getText(); // needed for the asserTrue format(it did not want to accept this code inside)
-
-        // Assertions.assertTrue(result.contains("King Kunta"));
-
         // signup
         driver.get("http://localhost:8080/users/new");
         String name = faker.name().firstName();
