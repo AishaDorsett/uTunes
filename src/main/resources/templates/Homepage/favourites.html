@@ -34,16 +34,13 @@
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-b526fbc5-0965-452f-8696-dcd7f8bc3097"></div>
 
-    <!-- <tr th:each="user: ${userId}">
-      <td th:text="${user.id}"></td> -->
-      <!-- <td><a th:href="@{/favourite}" th:text="Description">Description</a></td> -->
-      <td th:each="tune : ${tunes}">
+    <!--favourites listed here-->
+    
+      <th:block th:each="tune : ${tunes}">
         <ul>
-          <!-- <li th:text= ${tune.getTrackname()}></li> -->
           <h3><a class="tune-text" th:text="${tune.getArtistname()}"></h3>
           <h4><a id="trackname" class="tune-text" th:text="${tune.getTrackname()}" th:href="${tune.getLink()}" target="_blank"></h4>
         </ul>
-      </td>
-    <!-- </tr> -->
+     </th:block>
 </body>
 </html>

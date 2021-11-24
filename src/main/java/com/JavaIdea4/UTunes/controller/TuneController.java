@@ -38,7 +38,12 @@ public class TuneController {
 	}
 
 	@GetMapping("/tunes/favourites")
-	public String favourites() {
+	public String favourites(Model model, Principal principal) {
+		User user = userRepository.findByUsername(principal.getName()).get(0);
+		model.addAttribute("userId", userRepository.findAll());
+			model.addAttribute("tuneId", repository.findAll());
+			Set<Tune> tunes = user.tunes;
+			model.addAttribute("tunes", tunes);
     	return "homepage/favourites.html";
 	}
 
