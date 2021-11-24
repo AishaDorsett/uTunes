@@ -39,8 +39,15 @@ body {
   margin-bottom: 0px;
 }
 
-/* favourites / search header spacing */
-.faves-header, .search-header {
+/* favourites header spacing */
+.faves-header {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+/* search header spacing */
+.search-header {
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
