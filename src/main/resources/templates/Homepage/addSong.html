@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head lang="en">
+  <meta charset="UTF-8" />
+  <title>uTunes</title>
+  <link rel="icon" href="https://icons.iconarchive.com/icons/webalys/kameleon.pics/512/Record-Player-icon.png" sizes="any">
+  <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="search-navbar">
+  <ul>
+    <li>
+      <a class="navbar-brand">uTunes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="nav-search"href="/tunes">Search</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="nav-faves"href="/tunes/favourites">Favourites</a>
+    </li>
+    <li class="nav-item">
+      <a id="nav-link" href="#popup1"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <h2>Are you sure you want to log out?</h2>
+            <a class="close" href="/logout">Yes</a><br /><br />
+            <a class="close" href="#">No</a>
+          </div>
+        </div>
+    </li>
+  </ul>
+</nav>
+
+<body>
+  <form class="signup-form" action="#" th:action="@{/add/tunes}" th:object="${tune}" method="post" enctype="multipart/form-data">
+      <p><input class="signup-fields" type="text" th:field="*{trackname}" name="trackname" placeholder="trackname" required /></p>
+      <p><input class="signup-fields" type="text" th:field="*{artistname}" placeholder="Artist Name" required /></p>
+      <p><input class="signup-fields" type="text" th:field="*{genre}" placeholder="Genre" required /></p>
+      <p><input class="signup-fields" type="text" th:field="*{link}" placeholder="Link" required /></p>
+      <input class="submit" type="submit" value="Submit" id="submit" />
+      <input class="reset" type="reset" value="Reset" />
+  </form>
+</body>
+</html>
