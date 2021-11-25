@@ -7,7 +7,7 @@
 </head>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="search-navbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="faves-navbar">
     <ul>
       <li>
         <a class="navbar-brand">uTunes</a>
@@ -32,18 +32,27 @@
   </nav>
 
 <body class="faves-body">
-    <h1 class="faves-header">My Favourite Tunes</h1>
-
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-b526fbc5-0965-452f-8696-dcd7f8bc3097"></div>
-
-    <!--favourites listed here-->
-    
-      <th:block th:each="tune : ${tunes}">
-        <ul>
-          <h3><a class="tune-text" th:text="${tune.getArtistname()}"></h3>
-          <h4><a id="trackname" class="tune-text" th:text="${tune.getTrackname()}" th:href="${tune.getLink()}" target="_blank"></h4>
-        </ul>
-     </th:block>
+  <h2 class="faves-header">My Favourite Tunes</h2>
+  <!-- socials buttons -->
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <div class="elfsight-app-b526fbc5-0965-452f-8696-dcd7f8bc3097"></div>
+    <!-- returning favourites -->
+    <td th:each="tune : ${tunes}">
+      <div class="container tunes-trackname">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="card mx-auto d-flex justify-content-center">
+              <div class="card-body">
+                <!-- Content -->
+                <div class="tune-body">
+                  <h3><a class="tune-text" th:text="${tune.getArtistname()}"></h3>
+                  <h4><a id="trackname" class="tune-text" th:text="${tune.getTrackname()}" th:href="${tune.getLink()}" target="_blank"></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
 </body>
 </html>
