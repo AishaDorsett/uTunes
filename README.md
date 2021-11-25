@@ -110,8 +110,3 @@ I would like to be able to search for associated artists
  ### Social share buttons
  - we are currently using a free version of https://elfsight.com/social-media-share-buttons/, which has a limit of usage of 200 views
  - we could hard code the buttons ourselves or look into other options
- 
- 
- 
- 
- 
