@@ -32,10 +32,10 @@
 
 <body>
   <form class="signup-form" action="#" th:action="@{/add/tunes}" th:object="${tune}" method="post" enctype="multipart/form-data">
-      <p><input class="signup-fields" type="text" th:field="*{trackname}" name="trackname" placeholder="trackname" required /></p>
-      <p><input class="signup-fields" type="text" th:field="*{artistname}" placeholder="Artist Name" required /></p>
-      <p><input class="signup-fields" type="text" th:field="*{genre}" placeholder="Genre" required /></p>
-      <p><input class="signup-fields" type="text" th:field="*{link}" placeholder="Link" required /></p>
+      <p><input id="trackname" class="signup-fields" type="text" th:field="*{trackname}" name="trackname" placeholder="trackname" required /></p>
+      <p><input id="artistname" class="signup-fields" type="text" th:field="*{artistname}" placeholder="Artist Name" required /></p>
+      <p><input id="genre" class="signup-fields" type="text" th:field="*{genre}" placeholder="Genre" required /></p>
+      <p><input id="link" class="signup-fields" type="text" th:field="*{link}" placeholder="Link" required /></p>
       <input class="submit" type="submit" value="Submit" id="submit" />
       <input class="reset" type="reset" value="Reset" />
   </form>
