@@ -34,7 +34,7 @@ Team tigers-java-idea-4:
 ### MVP 
 
 ```
- [x] As a human person
+[x] As a human person
 So that I can find music that I will like
 I would like to search by genre
 ```
