@@ -13,19 +13,19 @@ I would like to search by genre
 ## Additional Features -
 
 ```
-[ ] As a big music fan
+[x] As a big music fan
 So that I can listen to my choons again
 I would like to save a list of favourite jamz
 ```
 
 ```
-[ ] As a well-listened fan
+[x] As a well-listened fan
 So that I can keep on top of all of my favourite music
 I would like to be able to add trax
 ```
 
 ```
-[ ] As a fanatic enjoyer of music
+[x] As a fanatic enjoyer of music
 So that I can share the love with my fellow human people
 I would like to share a YouTube/Bandcamp link to each song
 ```
