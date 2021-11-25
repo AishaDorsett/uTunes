@@ -21,55 +21,19 @@ body {
 .navbar {
   background-color: transparent !important;
   display: inline;
-  padding: 0;
-  margin-bottom: 0;
+  /* padding: 0; */
+  /* margin-bottom: 0; */
   text-align: center;
   margin: auto;
+  text-decoration: none;
+  /* margin-left: 2rem; */
   /* padding: 1rem; */
 }
 
-/* favourites / search navbar text */
-#search-navbar li, #faves-navbar li {
-  display: inline;
-  padding-right: 150px;
-}
-
-/* favourites / search navbar margins */
-#search-navbar ul, #faves-navbar ul {
-  margin-bottom: 0px;
-}
-
-/* favourites header spacing */
-.faves-header {
-  padding-top: 20px;
-  padding-bottom: 30px;
-}
-
-/* search header spacing */
-.search-header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* login / signup navbar text */
-#login-navbar li, #signup-navbar li {
-  display: inline;
-  padding-right: 20px;
+.navbar li {
+  /* padding-right: 20px; */
   padding-left: 20px;
-}
-/* login / signup page navbar text alignment */
-.login-navbar, .signup-navbar {
-  display:inline-block;
-  margin: 0.2rem;
-  text-align: right;
-  margin-left: 2rem;
-}
-
-/* all navbar text continued... */
-.navbar a {
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
+  /* text-decoration: none; */
   color: rgba(209, 131, 21, 0.7);
 }
 
@@ -83,7 +47,33 @@ body {
 .nav-item, .create-account-text {
   font-size: 15px;
   color: rgba(209, 131, 21, 0.7);
+  text-decoration: none;
 }
+
+/* favourites / search navbar text */
+/* #search-navbar li, #faves-navbar li {
+  display: inline;
+  padding-right: 150px;
+} */
+
+/* favourites / search navbar margins */
+/* #search-navbar, #faves-navbar {
+  margin-bottom: 0px;
+} */
+
+/* favourites header spacing */
+/* .faves-navbar, .search-navbar {
+  padding-right: 20px;
+  padding-left: 20px;
+  display:inline;
+} */
+
+/* #search-navbar {
+  display:inline-block;
+} */
+
+/* login / signup navbar text */
+
 
 /* genre picker - entire form */
 .selectgenre, .signup-form, .title {
