@@ -28,14 +28,14 @@ public class TuneController {
 
 	@GetMapping("/tunes")
 	public String listtunes(Model model) { 
-		return "homepage/search.html";
+		return "homepage/search";
 	}
 	
 	@GetMapping("/tunes/search")
 	public String search(@RequestParam String genre, Model model) {
 		Iterable<Tune> tunes = repository.findByGenre(genre);
 		model.addAttribute("tunes",tunes);
-		return "homepage/search.html";
+		return "homepage/search";
 	}
 
 	@GetMapping("/tunes/favourites")
@@ -45,7 +45,7 @@ public class TuneController {
 			model.addAttribute("tuneId", repository.findAll());
 			Set<Tune> tunes = user.tunes;
 			model.addAttribute("tunes", tunes);
-    	return "homepage/favourites.html";
+    	return "homepage/favourites";
 	}
 
 		@GetMapping("/add/{id}")
